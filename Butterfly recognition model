@@ -21,7 +21,7 @@ model.add(Flatten())
 
 # Step 4 - Fully Connected Layers
 model.add(Dense(64, activation='relu'))
-model.add(Dense(OutputNeurons, activation='softmax'))  # OutputNeurons = number of classes
+model.add(Dense(OutputNeurons, activation='softmax'))  
 
 # Compile the CNN
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
