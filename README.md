@@ -1,4 +1,4 @@
-# Butterfly-Recognitio
+# Butterfly-Recognition 
 
 ### 🦋 Butterfly Recognition System using Convolutional Neural Networks
 This project is about building a deep learning model to automatically identify different species of butterflies from images. It uses a Convolutional Neural Network (CNN) built with Python and Keras to classify images into five butterfly species.
