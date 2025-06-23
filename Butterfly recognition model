@@ -1,0 +1,41 @@
+# -------------------- Create CNN deep learning model --------------------
+from keras.models import Sequential
+from keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
+import time
+
+# Initialize the CNN
+model = Sequential()
+
+# Step 1 - Convolution
+model.add(Conv2D(32, kernel_size=(5, 5), strides=(1, 1), activation='relu', input_shape=(64, 64, 3)))
+
+# Step 2 - Max Pooling
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+# Second Convolution + Pooling layer
+model.add(Conv2D(64, kernel_size=(5, 5), strides=(1, 1), activation='relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+# Step 3 - Flattening
+model.add(Flatten())
+
+# Step 4 - Fully Connected Layers
+model.add(Dense(64, activation='relu'))
+model.add(Dense(OutputNeurons, activation='softmax'))  # OutputNeurons = number of classes
+
+# Compile the CNN
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+
+# -------------------- Training the model --------------------
+start_time = time.time()
+
+history = model.fit(
+    training_set,
+    steps_per_epoch=16.5,  # total samples / batch size
+    epochs=10,
+    validation_data=test_set,
+    validation_steps=10
+)
+
+end_time = time.time()
+print("Training completed in", round((end_time - start_time) / 60), "minutes.")
