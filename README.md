@@ -6,7 +6,7 @@ This project is about building a deep learning model to automatically identify d
 ---
 
 ### 📚 Dataset
-The model was trained on a dataset containing **663 images** from 5 species:
+The model was trained on a dataset containing **663 images**(Kaggle) from 5 species:
 
 * Cairns Birdwing
 * Green Celled Cattleheart
